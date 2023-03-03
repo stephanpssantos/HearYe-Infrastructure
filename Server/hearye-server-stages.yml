@@ -30,6 +30,8 @@
     workspace:
       clean: all # Options: outputs, resources, all
     steps:
+    - checkout: self
+    - checkout: BWA
     - template: 'hearye-server-tasks-build.yml'
       parameters: 
         buildId: ${{ parameters.buildId }}
@@ -48,6 +50,7 @@
       runOnce:
         deploy:
           steps:
+          - checkout: self
           - checkout: BWA
           - template: 'hearye-server-tasks-deploy.yml'
             parameters:

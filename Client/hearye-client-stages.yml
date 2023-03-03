@@ -29,6 +29,8 @@
     workspace:
       clean: all # Options: outputs, resources, all
     steps:
+    - checkout: self
+    - checkout: BWA
     - template: 'hearye-client-tasks-build.yml'
 
 # Deploy
@@ -43,6 +45,8 @@
       runOnce:
         deploy:
           steps:
+          - checkout: self
+          - checkout: BWA
           - template: 'hearye-client-tasks-deploy.yml'
             parameters:
               azureSubscription: ${{ parameters.azureSubscription }} # AzDO will not allow a variable for this field in the task

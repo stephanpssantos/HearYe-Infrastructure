@@ -2,6 +2,9 @@
 
 resources:
   repositories:
+  - repository: self
+    type: git
+    name: self
   - repository: BWA
     type: git
     name: BWA
