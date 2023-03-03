@@ -2,9 +2,9 @@
 
 resources:
   repositories:
-  - repository: self
+  - repository: BWA
     type: git
-    name: self
+    name: BWA
 
 trigger:
   branches:
