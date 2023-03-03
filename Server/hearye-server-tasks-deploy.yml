@@ -38,6 +38,15 @@
     SecretsFilter: 'graph-appregsecret'
     RunAsPreJob: false
 
+# Get apim-secret from keyvault
+- task: AzureKeyVault@1
+  displayName: 'Get graph key from kv'
+  inputs:
+    azureSubscription: ${{ parameters.azureSubscription }}
+    KeyVaultName: ${{ parameters.kvName }}
+    SecretsFilter: 'apim-secret'
+    RunAsPreJob: false
+
 # Azure CLI; Remove ADO hosted agent from KV whitelist
 - task: AzureCLI@2
   displayName: 'Remove ADO hosted agent from KV whitelist'
@@ -67,7 +76,8 @@
     csmParametersFile: '$(System.DefaultWorkingDirectory)/BWA-Deployment/Server/containerAppARM.parameters.json' # Optional
     overrideParameters: >
       -azuresql-appregsecret $(azuresql-appregsecret)
-      -graph-appregsecret $(graph-appregsecret) 
+      -graph-appregsecret $(graph-appregsecret)
+      -apim-secret $(apim-secret) 
       -container-image ${{ format('docker.io/stephansantos/hearye-docker:v1.{0}', parameters.buildId) }}
     # NOTE - $($(parameters.keyVaultAppRegSecret)) is taking the value of a variable (the secret's name) 
     #        and placing it inside variable brackets to call on a variable with that name and get the secret's value

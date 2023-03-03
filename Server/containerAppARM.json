@@ -39,6 +39,9 @@
     },
     "azuresql-appregsecret": {
       "type": "SecureString"
+    },
+    "apim-secret": {
+      "type": "SecureString"
     }
   },
   "variables": {},
@@ -62,6 +65,10 @@
             {
               "name": "azuresql-appregsecret",
               "value": "[parameters('azuresql-appregsecret')]"
+            },
+            {
+              "name": "apim-secret",
+              "value": "[parameters('apim-secret')]"
             }
           ],
           "activeRevisionsMode": "Single",
@@ -91,6 +98,10 @@
                 {
                   "name": "AzureSQL_AppRegSecret",
                   "secretRef": "azuresql-appregsecret"
+                },
+                {
+                  "name": "APIM_Secret",
+                  "secretRef": "apim-secret"
                 },
                 {
                   "name": "Logging__LogLevel__Default",
