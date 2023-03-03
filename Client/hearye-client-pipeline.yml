@@ -13,6 +13,7 @@ resources:
       paths:
         include:
         - 'Client/*'
+
   - repository: BWA
     type: git
     name: BWA
