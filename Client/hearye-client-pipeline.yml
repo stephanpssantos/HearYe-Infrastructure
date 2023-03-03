@@ -8,6 +8,7 @@ resources:
   - repository: BWA
     type: git
     name: BWA
+    ref: main
     trigger:
       branches:
         include:
