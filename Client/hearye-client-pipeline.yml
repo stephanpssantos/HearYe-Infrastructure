@@ -5,6 +5,14 @@ resources:
   - repository: self
     type: git
     name: self
+    ref: main
+    trigger:
+      branches:
+        include:
+        - main
+      paths:
+        include:
+        - 'Client/*'
   - repository: BWA
     type: git
     name: BWA
