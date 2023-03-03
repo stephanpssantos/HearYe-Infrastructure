@@ -15,7 +15,7 @@ trigger:
     - main
   paths:
     include:
-    - 'Server/*'
+    - 'BWA/Server/*'
 
 variables:
 - name: projectName
@@ -23,11 +23,11 @@ variables:
   readonly: true
 
 - name: projectFile
-  value: '**/Server/*.csproj'
+  value: '**/BWA/Server/*.csproj'
   readonly: true
 
 - name: solution
-  value: '**/*.sln'
+  value: '**/BWA/*.sln'
   readonly: true
 
 - name: artifactName

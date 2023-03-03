@@ -10,7 +10,7 @@
     repository: stephansantos/hearye-docker # string. Optional. Use when command != login && command != logout && command != start && command != stop. Container repository. 
   # Commands
     command: 'buildAndPush' # 'buildAndPush' | 'build' | 'push' | 'login' | 'logout' | 'start' | 'stop'. Required. Command. Default: buildAndPush.
-    Dockerfile: '**/Dockerfile' # string. Required when command = build || command = buildAndPush. Dockerfile. Default: **/Dockerfile.
+    Dockerfile: '**/BWA/Dockerfile' # string. Required when command = build || command = buildAndPush. Dockerfile. Default: **/Dockerfile.
     buildContext: '.' # string. Optional. Use when command = build || command = buildAndPush. Build context. Default: **.
     tags: ${{ format('v1.{0}', parameters.buildId) }} # string. Optional. Use when command = build || command = push || command = buildAndPush. Tags. Default: $(Build.BuildId).
     #arguments: # string. Optional. Use when command != login && command != logout && command != buildAndPush. Arguments. 
@@ -26,7 +26,7 @@
     repository: stephansantos/hearye-docker # string. Optional. Use when command != login && command != logout && command != start && command != stop. Container repository. 
   # Commands
     command: 'buildAndPush' # 'buildAndPush' | 'build' | 'push' | 'login' | 'logout' | 'start' | 'stop'. Required. Command. Default: buildAndPush.
-    Dockerfile: '**/Dockerfile' # string. Required when command = build || command = buildAndPush. Dockerfile. Default: **/Dockerfile.
+    Dockerfile: '**/BWA/Dockerfile' # string. Required when command = build || command = buildAndPush. Dockerfile. Default: **/Dockerfile.
     buildContext: '.' # string. Optional. Use when command = build || command = buildAndPush. Build context. Default: **.
     tags: 'latest' # string. Optional. Use when command = build || command = push || command = buildAndPush. Tags. Default: $(Build.BuildId).
     #arguments: # string. Optional. Use when command != login && command != logout && command != buildAndPush. Arguments. 
