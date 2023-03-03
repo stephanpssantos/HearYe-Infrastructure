@@ -30,7 +30,6 @@
     workspace:
       clean: all # Options: outputs, resources, all
     steps:
-    - checkout: self
     - checkout: BWA
     - template: 'hearye-server-tasks-build.yml'
       parameters: 
