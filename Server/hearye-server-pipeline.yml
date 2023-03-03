@@ -1,4 +1,4 @@
-﻿name: $(SourceBranchName)-client-$(date:yyyyMMdd)$(rev:.r)
+﻿name: $(SourceBranchName)-server-$(date:yyyyMMdd)$(rev:.r)
 
 resources:
   repositories:
