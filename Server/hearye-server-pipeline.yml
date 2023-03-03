@@ -1,10 +1,15 @@
 ﻿name: $(SourceBranchName)-server-$(date:yyyyMMdd)$(rev:.r)
 
+trigger:
+  branches:
+    include:
+    - main
+  paths:
+    include:
+    - 'Server/*'
+
 resources:
   repositories:
-  - repository: self
-    type: git
-    name: self
   - repository: BWA
     type: git
     name: BWA
