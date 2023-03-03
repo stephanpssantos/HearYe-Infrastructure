@@ -63,8 +63,8 @@
     resourceGroupName: ${{ parameters.resourceGroup }}
     location: 'westus2' # Required when action = Create Or Update Resource Group
     templateLocation: 'Linked artifact' # Options: linked Artifact, uRL Of The File
-    csmFile: '$(System.DefaultWorkingDirectory)/BWA/Server/containerAppARM.json' # Required when  TemplateLocation = Linked Artifact
-    csmParametersFile: '$(System.DefaultWorkingDirectory)/BWA/Server/containerAppARM.parameters.json' # Optional
+    csmFile: '$(System.DefaultWorkingDirectory)/BWA-Deployment/Server/containerAppARM.json' # Required when  TemplateLocation = Linked Artifact
+    csmParametersFile: '$(System.DefaultWorkingDirectory)/BWA-Deployment/Server/containerAppARM.parameters.json' # Optional
     overrideParameters: >
       -azuresql-appregsecret $(azuresql-appregsecret)
       -graph-appregsecret $(graph-appregsecret) 
