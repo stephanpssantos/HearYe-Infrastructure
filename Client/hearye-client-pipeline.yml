@@ -8,14 +8,13 @@ resources:
   - repository: BWA
     type: git
     name: BWA
-
-trigger:
-  branches:
-    include:
-    - main
-  paths:
-    include:
-    - 'Client/*'
+    trigger:
+      branches:
+        include:
+        - main
+      paths:
+        include:
+        - 'Client/*'
 
 variables:
 - name: projectName
