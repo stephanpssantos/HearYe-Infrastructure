@@ -24,7 +24,7 @@ resources:
 
 variables:
 - name: projectName
-  value: 'hearye' # Example: 'hearye'
+  value: 'hearye' # Example: 'honky'
   readonly: true
 
 - name: projectFile
