@@ -7,6 +7,14 @@
     checkLatest: true # Optional
 
 - task: DotNetCoreCLI@2
+  displayName: 'Dotnet workload install wasm tools'
+  inputs:
+    command: 'custom'
+    custom: 'workload'
+    arguments: 'install wasm-tools'
+    feedsToUse: 'select'
+
+- task: DotNetCoreCLI@2
   displayName: 'Dotnet publish'
   inputs:
     command: 'publish' # 'build' | 'push' | 'pack' | 'publish' | 'restore' | 'run' | 'test' | 'custom'. Required. Command. Default: build.
